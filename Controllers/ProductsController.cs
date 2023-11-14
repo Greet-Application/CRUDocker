@@ -14,6 +14,12 @@ namespace ProductCRUD.API.Controllers
 			_context = context;
 		}
 		[HttpGet]
+		public string Tetst()
+		{
+			return "reached";
+		}
+
+		[HttpGet]
 		public async Task<IActionResult> GetAllAsync()
 		{
 			var products = await _context.Products.ToListAsync();
